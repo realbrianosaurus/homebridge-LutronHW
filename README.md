@@ -13,8 +13,20 @@ Note: This plugin communicates with Lutron controllers over rs-232
 Configuration sample:
 
  ```
-"accessories": [
+"platforms": [
     {
+	"platform": "LutronHW-RS232",
+	"name": "LutronHW",
+	"path": "/dev/ttyUSB0",
+	"rooms": [
+	    {
+	        "name": "Living Room",
+		"lights": [
+		    ["Ceiling", "01:02:03:04:05"],
+		    ["Lamp", "01:02:03:04:04"]
+		],
+	    }
+	]
     }
 ]
 ```
